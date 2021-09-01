@@ -14,8 +14,6 @@ if (!DOMAIN) {
   return
 }
 
-main();
-
 /**
  * 主体函数
  */
@@ -33,3 +31,5 @@ function main() {
     }
   })
 }
+
+main();

@@ -10,16 +10,16 @@ npm run build
 cd docs/.vuepress/dist
 
 # deploy to github pages
-echo 'b.xugaoyi.com' > CNAME
+echo 'blog.whys2014.cn' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:xugaoyi/vuepress-theme-vdoing.git
+  githubUrl=git@github.com:qqchenhai/vuepress-theme-voding.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://xugaoyi:${GITHUB_TOKEN}@github.com/xugaoyi/vuepress-theme-vdoing.git
-  git config --global user.name "xugaoyi"
-  git config --global user.email "894072666@qq.com"
+  githubUrl=https://qqchenhai:${GITHUB_TOKEN}@github.com/qqchenhai/vuepress-theme-vdoing.git
+  git config --global user.name "qqchenhai"
+  git config --global user.email "like_no_scode@163.com"
 fi
 git init
 git add -A
@@ -28,16 +28,15 @@ git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
 # deploy to coding pages
 # echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
-# echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
-
-# if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
-#   codingUrl=git@e.coding.net:xgy/xgy.git
-# else
-#   codingUrl=https://HmuzsGrGQX:${CODING_TOKEN}@e.coding.net/xgy/xgy.git
-# fi
-# git add -A
-# git commit -m "${msg}"
-# git push -f $codingUrl master # 推送到coding
+echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
+if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
+  codingUrl=git@e.coding.net:mogui-13/mo-blog/blog.git
+else
+  codingUrl=https://mogui-13:${CODING_TOKEN}@e.coding.net/mo-blog/blog.git
+fi
+git add -A
+git commit -m "${msg}"
+git push -f $codingUrl master # 推送到coding
 
 cd -
 rm -rf docs/.vuepress/dist

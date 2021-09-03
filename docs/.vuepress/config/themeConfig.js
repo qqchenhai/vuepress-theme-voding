@@ -52,7 +52,7 @@ module.exports = {
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: 'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
+    avatar: 'https://cdn.jsdelivr.net/gh/qqchenhai/imaginge-host@main/online/h.55vj4l2iung0.jpg',
     name: 'Evan Mo',
     slogan: '前端界的小学生',
   },

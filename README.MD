@@ -91,6 +91,6 @@ npm run dev # or yarn dev
 <!-- <img src="https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/blog/qrcode.zdqv9mlfc0g.jpg"  style="width:30%;" /> -->
 
 ## 许可证
-<!-- [MIT](https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE)
+[MIT](https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE)
 
-Copyright (c) 2019-present Evan Xu -->
+Copyright (c) 2019-present Evan Mo

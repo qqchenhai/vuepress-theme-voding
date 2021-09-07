@@ -1,10 +1,30 @@
 // 插件配置
 module.exports = [
   // 本地插件
-  // [require('./plugins/love-me'), { // 鼠标点击爱心特效
-  //   color: '#11a8cd', // 爱心颜色，默认随机色
-  //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
-  // }],
+  [require('../plugins/love-me'), { // 鼠标点击爱心特效
+    // color: '#11a8cd', // 爱心颜色，默认随机色
+    excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
+  }],
+  // 看板娘
+  ['vuepress-plugin-helper-live2d', {
+    live2d: {
+      // hijiki: 黑猫， tororo： 白猫， miku： 初音
+      model: 'hijiki',
+      display: {
+        position: "left", // 显示位置：left/right(default: 'right')
+        width: 135, // 模型的长度(default: 135)
+        height: 180, // 模型的高度(default: 300)
+        hOffset: 10, //  水平偏移(default: 65)
+        vOffset: 10, //  垂直偏移(default: 0)
+      },
+      mobile: {
+        show: true, // 是否在移动设备上显示(default: false)
+      },
+      react: {
+        opacity: 0.8, // 模型透明度(default: 0.8)
+      }
+    }
+  }],
 
   'vuepress-plugin-baidu-autopush', // 百度自动推送
 
@@ -38,7 +58,7 @@ module.exports = [
       ],
     },
   ],
-
+  // 点击复制
   [
     'one-click-copy',
     {
@@ -49,6 +69,7 @@ module.exports = [
       showInMobile: false, // whether to display on the mobile side, default: false.
     },
   ],
+  // codepen示例
   [
     'demo-block',
     {
@@ -63,6 +84,7 @@ module.exports = [
       },
     },
   ],
+  // 放大图片
   [
     'vuepress-plugin-zooming', // 放大图片
     {
@@ -72,14 +94,16 @@ module.exports = [
       },
     },
   ],
+  // 百度统计
   [
-    'vuepress-plugin-baidu-tongji', // 百度统计
+    'vuepress-plugin-baidu-tongji',
     {
       hm: '503f098e7e5b3a5b5d8c5fc2938af002',
     },
   ],
+  // 评论
   [
-    'vuepress-plugin-comment', // 评论
+    'vuepress-plugin-comment',
     {
       choosen: 'gitalk',
       options: {
@@ -98,8 +122,9 @@ module.exports = [
       },
     },
   ],
+  // "上次更新"时间格式
   [
-    '@vuepress/last-updated', // "上次更新"时间格式
+    '@vuepress/last-updated',
     {
       transformer: (timestamp, lang) => {
         const dayjs = require('dayjs') // https://day.js.org/

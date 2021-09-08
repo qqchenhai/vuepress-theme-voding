@@ -109,7 +109,7 @@ module.exports = [
       options: {
         clientID: '668959ac3e0deb6b3ca5',
         clientSecret: 'ac11d4046993d58f435da2e588f0df18eb4f4a43',
-        repo: 'blog-gitalk-comment', // GitHub 仓库
+        repo: 'vuepress-theme-voding', // GitHub 仓库
         owner: 'qqchenhai', // GitHub仓库所有者
         admin: ['qqchenhai'], // 对仓库有写权限的人
         // distractionFreeMode: true,

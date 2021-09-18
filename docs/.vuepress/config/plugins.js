@@ -67,7 +67,7 @@ module.exports = [
         {
           // 目前仅支持网易云 TODO:多平台支持,默认为空数组
           name: "music.163.com",
-          songIDs:[], // 支持多个歌曲 ID
+          songIDs:['1417166015'], // 支持多个歌曲 ID
           playListIDs: ["2119127927"], // 支持多个歌单 ID
           timeOut: 2000, //加载超时,单位毫秒,默认2000
           firstClickPlay: true // 首次点击自动播放,对移动端友好

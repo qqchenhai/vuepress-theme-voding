@@ -15,7 +15,7 @@ module.exports = [
         width: 135, // 模型的长度(default: 135)
         height: 180, // 模型的高度(default: 300)
         hOffset: 10, //  水平偏移(default: 65)
-        vOffset: 10, //  垂直偏移(default: 0)
+        vOffset: 50, //  垂直偏移(default: 0)
       },
       mobile: {
         show: true, // 是否在移动设备上显示(default: false)
@@ -56,6 +56,23 @@ module.exports = [
           frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
         },
       ],
+    },
+  ],
+  // 音乐组件
+  [
+    "music-bar",
+    {
+      playList: [],
+      platform: [
+        {
+          // 目前仅支持网易云 TODO:多平台支持,默认为空数组
+          name: "music.163.com",
+          songIDs:[], // 支持多个歌曲 ID
+          playListIDs: ["6908563970", "2119127927"], // 支持多个歌单 ID
+          timeOut: 2000, //加载超时,单位毫秒,默认2000
+          firstClickPlay: true // 首次点击自动播放,对移动端友好
+        }
+      ]
     },
   ],
   // 点击复制

@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "vuepress-plugin-comment": "^0.7.3",
-    "vuepress-plugin-helper-live2d": "^1.0.2"
+    "vuepress-plugin-helper-live2d": "^1.0.2",
+    "vuepress-plugin-music-bar": "^3.7.6"
   }
 }

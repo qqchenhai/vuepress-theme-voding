@@ -9,7 +9,7 @@ module.exports = [
   ['vuepress-plugin-helper-live2d', {
     live2d: {
       // hijiki: 黑猫， tororo： 白猫， miku： 初音
-      model: 'hijiki',
+      model: 'miku',
       display: {
         position: "left", // 显示位置：left/right(default: 'right')
         width: 135, // 模型的长度(default: 135)
@@ -71,6 +71,7 @@ module.exports = [
             '1417166015',
             '191252',
             '165347',
+            '1377748865',
             '1808492017',
             '1365393542',
             '1493083969',
